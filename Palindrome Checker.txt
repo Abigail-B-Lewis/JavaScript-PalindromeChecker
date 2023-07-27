@@ -1,0 +1,8 @@
+
+function palindrome(str) {
+  let myRegex = /\W/g;
+  str = str.replaceAll(myRegex, "");
+  str = str.replaceAll("_", "").toLowerCase();
+  let rev = str.split("").reverse().join("");
+  return str === rev;
+}
